@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon"  href="img/favicon.png">
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMW</title>
+  </head>
+  <body>
+    <div id="splash">
+      <img src="img/bmw-logo.png" />
+    </div>
+    <nav class="navbar">
+      <div class="conttent">
+        <img src="img/bmw-logo.png" />
+        <div class="logo">BMW</div>
+      </div>
+
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="cars.html">CarS</a></li>
+        <li><a href="bikes.html">MotorcycleS</a></li>
+        <li><a href="engine.html">EngineS</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="overlay"></div>
+    <div id="container3D"></div>
+
+    <section id="home" class="section">
+      <video autoplay muted loop id="heroVideo">
+        <source src="img/bmw_showcase.mp4" type="video/mp4" />
+      </video>
+    </section>
+    <section id="about" class="section">
+      <div class="content">
+        <h1>About BMW</h1>
+        <p>
+          BMW is characterized by "Sheer Driving Pleasure" thru a unique blend
+          that combines powerful sporty performance, exceptional driving
+          dynamics thanks to perfect weight distribution and rear-wheel drive,
+          luxurious elegant design, advanced technology, and a focus on
+          efficiency and sustainability (especially in electric and hybrid
+          models), in addition to manufacturing quality and attention to
+          internal and external details, providing a distinguished driving
+          experience that connects the driver and the car.
+        </p>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <div class="content">
+        <h1>Features</h1>
+        <p>
+          BMW is known for its performance, luxury, and cutting-edge tech,
+          featuring innovations like the intuitive iDrive system, xDrive
+          all-wheel drive, remote preconditioning, over-the-air updates (Remote
+          Software Upgrade), Laserlighting, ConnectedDrive services (app
+          control, 3D view), and performance M models with unique design
+          elements, all centered on delivering a premium driving experience.
+        </p>
+      </div>
+    </section>
+
+    <section id="gallery" class="section">
+      <div class="content">
+        <h1>What will our website offer you?</h1>
+        <p>
+          Our site will feature a collection of valuable BMW models along with a range of BMW engines and a selection of BMW motorcycles.
+          We will tell you everything about BMW, my friend.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="content">
+        <h1>Contact</h1>
+        <p>
+          For more information about BMW car or to schedule a test drive,
+          please reach out via email "BmwCompany077@gmail.com".
+        </p>
+      </div>
+    </section>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.module.js"
+        }
+      }
+      </script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>

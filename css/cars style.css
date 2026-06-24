@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 30px;
+  padding: 40px;
+}
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "poppins", sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0a0a0a;
+    height: 10px;
+  
+  }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #28309c, #999);
+    border-radius: 20px;
+    height: 10px;
+  
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #999, #072a52);
+  }
+body{
+    height: 301vh;
+    background-color: #111;
+}
+.content-fit {
+    width:30vh;
+    /* margin: auto; */
+    text-align: center;
+    min-height: 20vh;
+    position: relative;
+    /* padding-block: 10em; */
+}
+
+#banner .title {
+    color: #dfdfdf;
+    font-size: 5em;
+    font-family: "devil breeze";
+    font-weight: bold;
+    position: relative;
+    left: 50%;
+    text-align: center;
+}
+#banner .title::before {
+    content: attr(data-before);
+    position: absolute;
+    /* top: 5em; */
+
+    inset: 0.66em 0 0 0;
+    z-index: -1;
+    color: #0015f94f;
+}
+.home-icon {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #4b7ae7; 
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 1000;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.home-icon:hover {
+  transform: scale(1.2);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.home-icon svg {
+  display: block;
+}
+
+.car-card {
+  background: linear-gradient(145deg, #111, #1a1a1a);
+  border-radius: 16px;
+  padding: 20px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.car-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+}
+
+.car-card img {
+  width: 100%;
+  object-fit: contain;
+  margin-bottom: 15px;
+  transition: 0.4s;
+}
+
+.car-card:hover img {
+  transform: scale(1.05);
+}
+.car-card h3 {
+  font-size: 20px;
+  margin: 10px 0 5px;
+}
+
+.car-card p {
+  font-size: 15px;
+  opacity: 0.8;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.popup {
+  width: 60%;
+  height: 100%;
+  background: #111;
+  color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  transform: scale(0.8);
+  transition: 0.3s ease;
+}
+
+.overlay.active .popup {
+  transform: scale(1);
+}
+
+.popup img {
+  width: 100%;
+  /* height: 50%; */
+  border-radius: 10px;
+}
+
+.close {
+  cursor: pointer;
+  font-size: 28px;
+  float: right;
+}
+.img-box {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  margin-bottom: 15px;
+}
+
+.img-box img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.img-default {
+  opacity: 1;
+}
+.img-hover {
+  opacity: 0;
+}
+
+.car-card:hover .img-default {
+  opacity: 0;
+  transform: scale(1.05);
+}
+
+.car-card:hover .img-hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+
+
+.navbar img{
+    width: 80px;
+    height: 120px;
+    justify-content: center;
+    margin-bottom:0 ;
+
+}
+.navbar ul{
+    position: fixed;
+    right: 10%;
+    top: 6%;
+}
+.conttent{
+    position: fixed;
+    top: -4%;
+    left: 10%;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 40px;
+  background-color: transparent;
+  padding: 15px 20px;
+  z-index: 804;
+  display: flex;
+  gap: 200px;
+  justify-content: center;
+  /* box-shadow: 0 2px 5px rgba(0,0,0,0.1); */
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: rgb(187, 194, 202);
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 5px;
+  transition: color 0.3s;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: rgb(177, 177, 191);
+  transition: width 0.3s;
+  box-shadow: #7b9cef;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+.navbar a:hover {
+  color: #4e69ae;
+}
